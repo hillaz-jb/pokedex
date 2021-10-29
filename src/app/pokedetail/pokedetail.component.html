@@ -1,0 +1,21 @@
+<div *ngIf="myPoke !== null && mySpecie !== null" class="container">
+  <div class="row">
+    <div [style.background-color]="mySpecie.color.name">
+      <div  class="card my-4" [style.background-color]="mySpecie.color.name">
+        <img class="img-fluid card-img-top" [src]="myPoke.sprites.other['official-artwork'].front_default" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">{{myPoke.name}}</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+

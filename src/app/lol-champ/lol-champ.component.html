@@ -1,0 +1,21 @@
+<h1 class="text-center mt-5">League Of Legend Champions</h1>
+
+
+<div *ngIf="myArrayAllChamp !== null" class="container">
+  <div class="row">
+    <div *ngFor="let champ of myArrayAllChamp" class="col-3 d-flex flex-wrap">
+      <div  class="card my-4">
+        <img class="img-fluid card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/{{champ.id}}_0.jpg" alt="Champion artwork">
+        <div class="card-body">
+          <h4 class="card-title text-center">{{champ.name}}</h4>
+          <p class="card-text text-center">{{champ.title}}</p>
+          <p class="text-center"><a routerLink="/lol/champion/{{champ.id}}" class="btn btn-dark">View Details</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+

@@ -1,0 +1,19 @@
+<div *ngIf="myChamp !== null" class="container">
+  <div>
+    <h1 class="text-center my-5">{{myChamp.name}}</h1>
+  </div>
+  <div class="row mb-5">
+    <div class="col-6">
+      <img class="img-fluid" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/{{myChamp.id}}_0.jpg" alt="Champion artwork">
+    </div>
+
+    <div class="col-6">
+      <h2 class="my-4 upperFirst">{{myChamp.title}}</h2>
+      <p>{{myChamp.lore}}</p>
+      <div class="d-flex flex-row">
+          <p *ngFor="let tag of myChamp.tags" [style.background-color]="setTagColor(tag)" class="btnForm me-4">{{tag}}</p>
+      </div>
+    </div>
+  </div>
+  <p class="text-center"><a routerLink="/lol" class="btn btn-success text-center">All Champions</a></p>
+</div>
