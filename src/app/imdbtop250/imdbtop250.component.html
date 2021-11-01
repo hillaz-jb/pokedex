@@ -1,0 +1,17 @@
+<h1 class="text-center mt-5">Top 250</h1>
+
+<div *ngIf="myArrayMovie !== null" class="container">
+
+  <div class="row">
+    <div *ngFor="let movie of limitedshow(1,8)" class="col-3 d-flex flex-wrap">
+      <div  class="card my-4" style="width: 18rem;">
+        <img class="img-fluid card-img-top" [src]=movie.image alt="Champion artwork">
+        <div class="card-body">
+          <h4 class="card-title text-center">{{movie.title}}</h4>
+          <p class="card-text text-center upperFirst">{{movie.year}}</p>
+          <p class="text-center"><a routerLink="/imdb/{{movie.id}}" class="btn btn-dark">View Details</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,5 +1,10 @@
+a {
+  text-decoration: none;
+  //color: #ffffff;
+  transition: all 0.4s ease;
+}
 .upperFirst {
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 
 .btnForm {
@@ -7,3 +12,4 @@
   border: transparent;
   border-radius: 5px;
 }
+

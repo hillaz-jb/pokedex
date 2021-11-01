@@ -1,0 +1,15 @@
+<div *ngIf="myArrayMovie !== null" class="container">
+  <div class="row">
+
+      <div  class="card my-4">
+        <img class="img-fluid card-img-top" [src]=myPosterUrl alt="Champion artwork">
+        <div class="card-body">
+          <h4 class="card-title text-center">{{theMovie().title}}</h4>
+          <p class="card-text text-center">{{theMovie().year}}</p>
+          <p class="card-text text-center">{{theMovie().imDbRating}}</p>
+        </div>
+      </div>
+
+  </div>
+</div>
+

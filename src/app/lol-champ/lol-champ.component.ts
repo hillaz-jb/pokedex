@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {LolService} from "../services/lol.service";
 import {IChamp} from "../../models/champ";
-import {IAllChamp} from "../../models/allChamp";
 import {IAllChampKey} from "../../models/allChampKey";
 
 @Component({
@@ -13,6 +12,7 @@ export class LolChampComponent implements OnInit {
 
   myArrayKey: Array<string> | null = null;
   myArrayAllChamp: Array<IAllChampKey> = [];
+  selectedOption: string = 'All';
 
   constructor(private mylolservice: LolService, ) { }
 
@@ -23,12 +23,14 @@ export class LolChampComponent implements OnInit {
       for (let i= 0; i < this.myArrayKey.length; i++){
         this.myArrayAllChamp.push(myData.data[this.myArrayKey[i]]);
       }
-
-      console.log(this.myArrayAllChamp[0].name);
-
     });
   }
 
-  // FAIRE UN TRI SUR LE TABLEAU POUR UN INPUT MENU DEROULANT TRI PAR TAG
+  sortbytag(tag: string): Array<IAllChampKey>{
+    if(tag != 'All'){
+      return this.myArrayAllChamp.filter(tagArray => tagArray.tags.includes(tag));
+    }
+    return this.myArrayAllChamp;
+  }
 
 }

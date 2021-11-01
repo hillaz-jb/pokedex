@@ -1,8 +1,4 @@
 export interface IAllChampKey {
-  // id: string;
-  // name: string;
-  // title: string;
-  // blurb: string;
   id: string;
   name: string;
   title: string;
